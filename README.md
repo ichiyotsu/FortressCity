@@ -1,181 +1,151 @@
 # 围城市政 Fortress City Gov.
 
-一个 **虚构城市政府** 的官方网站，复刻自 <https://toki.my.canvasite.cn/fc-gov> 的排版：
+一个 **虚构城市政府** 的网站群，排版来自 <https://toki.my.canvasite.cn/fc-gov>：
 纯黑舞台、白色字、暖琥珀文字光晕、超大的幽灵水印字。
 
-纯静态 HTML / CSS / JS，零构建、零依赖，可直接部署到 GitHub Pages。
+纯静态 HTML / CSS / JS，零构建、零依赖。
 
-**线上地址：** <https://ichiyotsu.github.io/FortressCity/>
+**线上：** <https://ichiyotsu.github.io/FortressCity/>
 **仓库：** <https://github.com/ichiyotsu/FortressCity>
 
 | 首页 | 新闻 |
 | --- | --- |
 | ![首页](docs/preview-home.png) | ![新闻](docs/preview-news.png) |
 
-| 交通部子站 | 周边商城 |
+| 交通部 | 礼品商城 |
 | --- | --- |
 | ![交通](docs/preview-transport.png) | ![商城](docs/preview-shop.png) |
 
 ---
 
+## 三个独立站点
+
+围城市政、市交通部、礼品商城是 **三个互相独立** 的二级网站，只在导航处互相跳转，不共用页头页脚：
+
+| 站点 | 入口 | 独立特征 |
+| --- | --- | --- |
+| **围城市政** | `/` | 顶部磨砂常驻栏 + 主导航 + 语言切换 |
+| **市交通部** | `/transport/` | 自己的 `Municipal. 26` 顶栏、彩色色带、运营数据表 |
+| **礼品商城** | `/shop/` | 自己的商城顶栏，只有 logo 和返回主页的入口 |
+
 ## 页面
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | **TokiPage 式首页**：欢迎语 + 头条新闻卡 + 巨型 `FCG at 26` 泛光声明 |
-| `/news/` | **新闻**：`Welcome to Official News Page!` + 幽灵字 `News` + 5 条按日期排列的公告 |
-| `/news/2026-08-23/` 等 | 5 篇新闻详情页（2026-08-23 / 08-21 / 07-07 / 06-25 / 06-24 / 06-23） |
-| `/transport/` | **交通**：围城市政 26 交通部官方网站，彩色 26 图形、四栏导航、运营主体数据表 |
-| `/transport/metro/` | 围城轨道交通（表格里唯一可点击的公司） |
-| `/transport/lines/` | 运营线路图（仍在绘制） |
-| `/transport/culture/` | 交通文化（整理中） |
-| `/livelihood/` | **民生**：幽灵字 `Livelihood` + 民生服务中心设立公告 |
-| `/me/` | **我的**：`您还不是围城市的市民` 身份闸门页 |
-| `/shop/` | **官方周边**：礼品商城，八周年 / 七周年 / 六周年 |
-| `/en/` | 英文版说明页（对应「正在测试英文版内容」那条新闻） |
-| `/404.html` | 页面不存在 |
+| `/` | 欢迎语 + 头条新闻卡（满宽）+ 巨型 `FCG at 26` |
+| `/news/` | 新闻列表，桌面端 **两列**，按日期倒序 |
+| `/news/<日期>/` | 6 篇新闻详情 |
+| `/transport/` | 市交通部：5 家运营主体的线路 / 站点数据表 |
+| `/transport/<公司>/` | 5 家公司页：围城交通部、南充公共交通集团、星云交通部、EC Transport、西城交运 |
+| `/transport/lines/`、`/culture/` | 运营线路图、交通文化 |
+| `/livelihood/` | 民生，桌面端两列 |
+| `/me/` | 市民个人页面（`您还不是围城市的市民`） |
+| `/shop/` | 礼品商城：八 / 七 / 六 / 五周年 |
+| `/en/…` | 英文版：首页、新闻（列表 + 6 篇）、民生、我的、404 |
 
-## 设计语言
+## 设计要点
 
 | 元素 | 做法 |
 | --- | --- |
-| 舞台 | 纯黑 `#000`，叠加三层极淡的暖色径向光，避免死板 |
-| 公告条 | `#3a3a3a` 灰底居中小字：观影须知 // 仅供娱乐 请勿当真 // … |
-| 页头 | 三段条纹字标 + `2026 / Test Version` 上标 + 右侧导航（当前页加粗并带光晕） |
-| Hero | `Welcome to` / 英文页名 / `欢迎来到 …` 三行，左对齐 |
-| 幽灵字 | 巨型暗色水印（`News` / `Livelihood` / `404`），右对齐到内容边缘 |
-| 光晕 | 取自原站的暖琥珀色 `text-shadow`：`rgba(165,108,68)` + `rgba(165,137,118)` 三层 |
-| 列表 | 日期在上、粗标题在下，悬停时标题泛光 |
-| 页脚 | `EN↗` / `官方周边↗`，再一行 `围城市政 Fortress City Gov.` 与 `©2026` |
+| 顶栏 | `position: sticky` + `backdrop-filter: blur(22px) saturate(150%)`，滚动后加深；手机端塌成「菜单」下拉面板 |
+| 页脚 | 半透明 + 磨砂，但 **不常驻** |
+| 光晕 | 取自原站的暖琥珀 `text-shadow`：`rgba(165,108,68)` + `rgba(165,137,118)` 三层 |
+| 幽灵字 | `News` / `Livelihood` / `404`，统一字号、统一亮度，右对齐到内容边缘 |
+| 巨幅标题 | `FCG at 26` 用 700 字重 + `text-stroke` 加厚 |
+| 语言切换 | 顶栏最右 `EN` / `中文`，逐页对应真实英文页面 |
+| 交通顶栏 | 桌面端滚过按钮行即吸顶；手机端是「菜单」按钮 |
+| 数据表 | 桌面 10 列完整展示；手机端可左右滑动，并提示「左右滑动查看完整表格」 |
+| 商城周年 | 六 / 五周年标记用涂鸦字体 [Sedgwick Ave Display](https://fonts.google.com/specimen/Sedgwick+Ave+Display)（OFL） |
 
-原站里「头条新闻 / FCG at 26 / 第八届」三个入口其实都指向同一个 `#page-4`（周边商城），属于没做完的状态；
-这里把它们拆成了真正的新闻详情页，`官方周边` 才指向商城。
+## 与初版的差别
 
-## 视觉资源
-
-所有图像都是本项目自绘的 SVG，没有引用原站的 Canva 素材：
-
-| 文件 | 用途 |
-| --- | --- |
-| `assets/img/logo.svg` | 三段条纹字标 |
-| `assets/img/starfield.svg` | 头条卡星空图（560 颗星 + 屋顶 + 悬浮纸箱） |
-| `assets/img/fcg26.svg` | 交通部彩色 26 标识 |
-| `assets/img/product-hoodie.svg` / `product-pillow.svg` | 八周年卫衣与抱枕 |
-| `assets/img/product-nuts.svg` | 七周年坚果礼盒 |
-| `assets/img/shop-waves.svg` / `shop-sixth.svg` | 七周年蓝波浪、六周年 SIXTH |
-| `assets/img/og.png` | 社交分享图（由 `_build/og.svg` 渲染） |
-
-字体：Latin 用 [Instrument Sans](https://github.com/Instrument/instrument-sans)（SIL OFL 1.1，见 `assets/fonts/OFL-InstrumentSans.txt`）；
-中文走系统字体栈（PingFang SC / 思源黑体 / 微软雅黑），不额外加载中文字体文件。
+- 去掉了全部页面的「观影须知」公告条。
+- 去掉了页脚最下面的「虚构城市政府网站 · Test Version」。
+- 去掉了顶栏字标旁的 `2026 / Test Version`，字标与 logo 垂直居中。
+- 交通部标题由 `Fortress City Gov. 26 / … Website` 改为 `Municipal. 26 / Transportation Department`，中文改为「市交通部」；去掉了 `Test Version` 角标和背景灰 `FCG` / `26`，右侧换成彩色色带。
+- 交通部表格改名为：围城交通部 / 南充公共交通集团 / 星云交通部 / EC Transport（东城交通）/ 西城交运；线路列改为 地铁 / 有轨 / 市域铁路 / 公交 / 出租，站点列改为 地铁 / 有轨 / 公交。
+- 删掉了「公共交通公司共有 3 家」整块、以及旧的 `围城轨道交通` 单页（拆成 5 家公司页）。
+- 礼品商城改为独立站，商品图直接取自原站截图，补上了五周年。
 
 ## 目录
 
 ```text
 .
-├─ index.html                # 首页
-├─ news/
-│  ├─ index.html             # 新闻列表
-│  └─ 2026-08-23/ …          # 5 篇详情
-├─ transport/
-│  ├─ index.html             # 交通部（关于我们）
-│  ├─ metro/  lines/  culture/
-├─ livelihood/index.html
-├─ me/index.html
-├─ shop/index.html
-├─ en/index.html
-├─ 404.html
+├─ index.html                 # 围城市政 首页
+├─ news/                      # 列表 + 6 篇详情
+├─ livelihood/  me/  404.html
+├─ en/                        # 英文版镜像
+├─ transport/                 # 市交通部（index + 5 家公司 + lines + culture）
+├─ shop/                      # 礼品商城（独立站）
 ├─ assets/
-│  ├─ css/  tokens · base · site · shop · transport
-│  ├─ js/   site.js          # 只做 IntersectionObserver 淡入与年份
-│  ├─ img/  全部自绘 SVG + og.png
-│  └─ fonts/ Instrument Sans + OFL
+│  ├─ css/  tokens · base · site · transport · shop
+│  ├─ js/   site.js           # 吸顶状态 / 手机菜单 / 淡入
+│  ├─ img/  products/ 商品图（取自原站）
+│  ├─ fonts/ Instrument Sans · Sedgwick Ave Display · OFL
+│  └─ img/  logo、starfield、ribbon、shop-waves、og
 ├─ robots.txt · sitemap.xml · site.webmanifest · .nojekyll
 └─ README.md
 ```
 
-## 本地预览
+## 改内容
 
-任选一种，不需要装任何东西：
+页面由 `_build/` 里的两个脚本生成（不发布），**改文案请改脚本或直接改 HTML**：
 
 ```powershell
-# A. 直接双击 index.html
-# B. 起一个本地服务器（推荐，路径行为与线上一致）
+# 围城市政 + 英文版（22 页）
+Set-ExecutionPolicy -Scope Process Bypass -Force
+D:\DSH\FortressGov\_build\gen.ps1
+
+# 市交通部（8 页）
+D:\DSH\FortressGov\_build\gen-transport.ps1
+```
+
+| 想改什么 | 去哪里 |
+| --- | --- |
+| 首页 / 新闻 / 民生 / 我的 / 英文版文案 | `_build/gen.ps1`（`$frag` 与 `$newsZh` / `$newsEn`） |
+| 交通部文案与表格数据 | `_build/gen-transport.ps1`（`$orgs`） |
+| 商城商品与周年 | `shop/index.html`、`assets/css/shop.css` |
+| 颜色 / 光晕 / 字号 | `assets/css/tokens.css` |
+| 页头页脚 / 列表 / 详情 | `assets/css/site.css` |
+
+## 本地预览
+
+```powershell
 python -m http.server 4173
 # http://127.0.0.1:4173/
 ```
 
+## 发布
+
+```powershell
+# 本机没有 git，用增量发布脚本（按 SHA256 只传改过的文件）
+Set-ExecutionPolicy -Scope Process Bypass -Force
+D:\DSH\FortressGov\_build\publish.ps1
+```
+
+脚本走 GitHub API：创建 blob → tree → 单个 commit → 推送 `main`，Pages 自动重建。
+
 ## 多仓库多站点
 
-GitHub Pages 的规则只有两条，理解这两条就能一个账号挂任意多个网站：
-
-| 仓库名 | 站点地址 | 说明 |
-| --- | --- | --- |
-| `<用户名>.github.io` | `https://<用户名>.github.io/` | **每个账号只有一个**，挂在根路径。这里就是 `ichiyotsu/ichiyotsu.github.io`（TokiPage） |
-| 任意其它名字 | `https://<用户名>.github.io/<仓库名>/` | **数量不限**，每个仓库一个独立站点。这里就是 `ichiyotsu/FortressCity` |
-
-所以本站的结构是：
-
-```text
-ichiyotsu.github.io/                 → 根站点（另一个仓库，TokiPage）
-ichiyotsu.github.io/FortressCity/    → 本站（本仓库，独立部署、互不影响）
-```
-
-要点：
-
-- 两个仓库各自有独立的 Pages 配置、独立的构建记录，推哪个只更新哪个。
-- 项目站点是**子路径**，所以本站所有链接都用相对路径，迁到任何路径下都能用（`canonical` / `sitemap` 里写的是绝对地址，换域名时记得一起改）。
-- 想再开第三个站（比如 `ichiyotsu/SomeApp`），照这个仓库复制一遍、开启 Pages 即可，不用动根站点。
-- 项目站点不能放在根路径；想变根路径只能换仓库名或换账号。
-- 自定义域名（CNAME）是**一个仓库一个域名**，根站点和项目站点可以各绑各的。
-
-## 部署（本仓库已完成）
-
-仓库 <https://github.com/ichiyotsu/FortressCity> 已推送，Pages 设置：
-
-- **Settings → Pages → Deploy from a branch**
-- Branch **main**、目录 **/(root)**
-
-`.nojekyll` 已经放好，带下划线的目录不会被 Jekyll 忽略。
-
-以后只改内容再发布：
-
-```powershell
-git add .
-git commit -m "update content"
-git push
-```
-
-Pages 会自动重建，一两分钟后生效。想从零重建同样的仓库：
-
-```powershell
-git init
-git add .
-git commit -m "Fortress City Gov. initial site"
-git branch -M main
-git remote add origin https://github.com/ichiyotsu/FortressCity.git
-git push -u origin main
-```
-
-## 改内容
-
-| 想改什么 | 去哪里 |
+| 仓库名 | 站点地址 |
 | --- | --- |
-| 首页欢迎语 / 头条卡 / FCG at 26 | `index.html` |
-| 新闻条目与详情 | `news/index.html`、`news/<日期>/index.html` |
-| 民生公告 | `livelihood/index.html` |
-| 我的页面文案 | `me/index.html` |
-| 商城商品、价格、年份 | `shop/index.html`、`assets/css/shop.css` |
-| 交通部表格数据 | `transport/index.html` |
-| 颜色、圆角、字号、光晕 | `assets/css/tokens.css` |
-| 页头 / 页脚 / 列表 / 详情页样式 | `assets/css/site.css` |
-| 交通部专用样式 | `assets/css/transport.css` |
-| 公告条文案 | 每个页面顶部的 `<p class="notice">` |
+| `ichiyotsu.github.io` | `https://ichiyotsu.github.io/`（根站点，另一个仓库） |
+| `FortressCity` | `https://ichiyotsu.github.io/FortressCity/`（本站） |
+
+仓库名不是 `<用户名>.github.io` 时，站点挂在子路径下——所以本站所有链接都是相对路径；
+`canonical` / `sitemap` / `og:url` 是绝对地址，换域名要一起改。
 
 ## 说明
 
-- 页面文案来自原站，属于**虚构城市设定**，与任何真实政府机构无关。
-- 新闻详情页的正文是把标题改写成短段落，没有新增虚构事实；如需替换成你写的原文，直接改那几个 `article__body`。
-- `_build/`（生成用临时文件）和 `_shots/`（本地截图）都在 `.gitignore` 里，不会发布。
+- 内容属于**虚构城市设定**，与任何真实政府机构无关。
+- 商品图截取自原站页面；新闻详情正文是把标题改写成短段落，没有新增虚构事实。
+- 交通部表格里的「公交 / 出租」数字是按合理值填的示意数据，可随时改。
+
+## Credits
+
+- 字体：[Instrument Sans](https://github.com/Instrument/instrument-sans)（OFL）、
+  [Sedgwick Ave Display](https://fonts.google.com/specimen/Sedgwick+Ave+Display)（OFL）
+- 视觉参考与文案：[toki.my.canvasite.cn/fc-gov](https://toki.my.canvasite.cn/fc-gov)
 
 ## License
 

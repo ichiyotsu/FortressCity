@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>交通 — 围城市政 26 交通部官方网站</title>
-<meta name="description" content="围城市政 26 交通部官方网站：围城市域内轨道交通与公共交通运营主体的线路与站点信息。">
+<title>市交通部 — Municipal. 26</title>
+<meta name="description" content="围城市政 26 市交通部官方网站：围城市域内五家轨道交通运营主体的线路与站点数据。">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://ichiyotsu.github.io/FortressCity/transport/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="交通 — 围城市政 26 交通部官方网站">
-<meta property="og:description" content="围城市域内轨道交通与公共交通运营主体一览。">
+<meta property="og:title" content="市交通部 — Municipal. 26">
+<meta property="og:description" content="围城市政 26 市交通部官方网站：围城市域内五家轨道交通运营主体的线路与站点数据。">
 <meta property="og:url" content="https://ichiyotsu.github.io/FortressCity/transport/">
 <meta property="og:image" content="https://ichiyotsu.github.io/FortressCity/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,101 +25,125 @@
 <body>
 <a class="skip-link" href="#main">跳到主要内容</a>
 
-<p class="notice"><span class="notice__inner">观影须知 &nbsp;//&nbsp; 仅供娱乐 请勿当真 &nbsp;//&nbsp; 本网站只是随心做了一些有关交通的自设内容 仍然在持续不断完善中...</span></p>
+<header class="t-topbar" data-sticky>
+  <div class="wrap t-topbar__inner">
+    <a class="t-topbar__brand" href="../transport/" aria-label="Municipal. 26 市交通部">
+      Municipal. <span class="thin">26</span>
+      <span class="cn">市交通部</span>
+    </a>
+    <button class="menu-btn" type="button" data-menu-toggle="t-nav" aria-expanded="false" aria-controls="t-nav">
+      <span class="menu-btn__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      菜单
+    </button>
+    <nav class="t-nav" id="t-nav" aria-label="交通部导航">
+        <a class="t-nav__link" href="../">围城市政</a>
+        <a class="t-nav__link" href="../transport/lines/">运营线路图</a>
+        <a class="t-nav__link" href="../transport/culture/">交通文化</a>
+        <a class="t-nav__link" href="../transport/" aria-current="page">关于我们</a>
+    </nav>
+  </div>
+</header>
 
 <main id="main">
   <section class="t-hero">
-    <span class="t-chip">Test Version</span>
     <div class="wrap t-hero__grid">
       <div>
         <h1 class="t-title">
-          Fortress City Gov. <span class="thin">26</span><br>
-          Transportation<br>
-          Department<br>
-          Website
+          Municipal. <span class="t-year">26</span><br>
+Transportation<br>Department
         </h1>
-        <p class="t-title__cn">围城市政 26<br>交通部官方网站</p>
+        <p class="t-title__cn">市交通部</p>
       </div>
       <div class="t-art">
-        <img src="../assets/img/fcg26.svg" alt="围城市政 26 交通部彩色标识" width="900" height="720">
+        <img src="../assets/img/ribbon.svg" alt="市交通部彩色色带" width="900" height="640">
       </div>
     </div>
   </section>
 
-  <div class="wrap">
-    <nav class="t-nav" aria-label="交通部导航">
-      <a class="t-nav__link" href="../">围城市政</a>
-      <a class="t-nav__link" href="lines/">运营线路图</a>
-      <a class="t-nav__link" href="culture/">交通文化</a>
-      <a class="t-nav__link" href="./" aria-current="page">关于我们</a>
-    </nav>
-  </div>
-
-  <section class="t-block" aria-labelledby="rail-title">
+  <section class="t-block">
     <div class="wrap">
       <div class="t-pill-row">
-        <h2 class="t-pill" id="rail-title">
+        <h2 class="t-pill">
           <span class="dim">截至2026.08</span>
           <span>围城市域内｜轨道交通公司共有5家 <span class="arrow" aria-hidden="true">↘</span></span>
         </h2>
-        <p class="t-hint">*单击运营公司可以访问具体页面<br>目前仅支持 <b>&lt;围城轨道交通&gt;</b></p>
+        <p class="t-hint">*单击运营公司可以访问具体页面</p>
       </div>
 
-      <div class="t-table">
-        <p class="t-table__head">运营地区</p>
-        <p class="t-table__head">运营公司</p>
-        <p class="t-table__head">运营线路｜条
-          <span class="t-table__sub t-table__sub--cols"><span>地铁</span><span>有轨</span><span>市域</span></span>
-        </p>
-        <p class="t-table__head">运营站点｜个
-          <span class="t-table__sub">换乘站点重复计算</span>
-        </p>
+      <div class="t-scroll">
+        <div class="t-head" aria-hidden="true">
+          <p class="t-head__cell t-head__cell--group" style="grid-area: 1 / 1 / 3 / 2">运营地区</p>
+          <p class="t-head__cell t-head__cell--group" style="grid-area: 1 / 2 / 3 / 3">运营公司</p>
+          <p class="t-head__cell" style="grid-area: 1 / 3 / 2 / 8">运营线路｜条</p>
+          <p class="t-head__sub" style="grid-area: 2 / 3 / 3 / 4">地铁</p>
+          <p class="t-head__sub" style="grid-area: 2 / 4 / 3 / 5">有轨</p>
+          <p class="t-head__sub" style="grid-area: 2 / 5 / 3 / 6">市域铁路</p>
+          <p class="t-head__sub" style="grid-area: 2 / 6 / 3 / 7">公交</p>
+          <p class="t-head__sub" style="grid-area: 2 / 7 / 3 / 8">出租</p>
+          <p class="t-head__cell" style="grid-area: 1 / 8 / 2 / 11">运营站点｜个</p>
+          <p class="t-head__sub" style="grid-area: 2 / 8 / 3 / 9">地铁</p>
+          <p class="t-head__sub" style="grid-area: 2 / 9 / 3 / 10">有轨</p>
+          <p class="t-head__sub" style="grid-area: 2 / 10 / 3 / 11">公交</p>
+        </div>
 
-        <p class="t-area">西城区</p>
-        <a class="t-org" href="metro/">围城轨道交通<small>Fortress Metro</small></a>
-        <p class="t-figs"><span>4</span><span class="dash">—</span><span class="dash">—</span></p>
-        <p class="t-figs t-figs--single"><span>32</span></p>
-
-        <p class="t-area">南充区</p>
-        <p class="t-org">南充轨道交通<small>NonChon Metro</small></p>
-        <p class="t-figs"><span>3</span><span class="dash">—</span><span class="dash">—</span></p>
-        <p class="t-figs t-figs--single"><span>12</span></p>
-
-        <p class="t-area">星云区</p>
-        <p class="t-org">星云轨道交通<small>TSingYun Metro</small></p>
-        <p class="t-figs"><span>5</span><span>2</span><span class="dash">—</span></p>
-        <p class="t-figs t-figs--single"><span class="dash">—</span></p>
-
-        <p class="t-area">东城新区</p>
-        <p class="t-org">EC Transportation<small>东城公共交通</small></p>
-        <p class="t-figs"><span>3</span><span>2</span><span>1</span></p>
-        <p class="t-figs t-figs--single"><span>25</span></p>
-
-        <p class="t-area">西城区</p>
-        <p class="t-org">西城交运<small>WESTTransportation</small></p>
-        <p class="t-figs"><span>2</span><span>1</span><span class="dash">—</span></p>
-        <p class="t-figs t-figs--single"><span>15</span></p>
+        <div class="t-table">
+          <p class="t-area">西城区</p>
+          <a class="t-org" href="fortress-city-transportation/">围城交通部<small>Fortress City Transportation</small></a>
+          <p class="t-num t-num--group">4</p>
+          <p class="t-num">—</p>
+          <p class="t-num">—</p>
+          <p class="t-num">12</p>
+          <p class="t-num">4</p>
+          <p class="t-num t-num--group">32</p>
+          <p class="t-num">—</p>
+          <p class="t-num">96</p>
+          <p class="t-area">南充区</p>
+          <a class="t-org" href="nonchon/">南充公共交通集团<small>NonChon Public Transportation Inc.</small></a>
+          <p class="t-num t-num--group">3</p>
+          <p class="t-num">—</p>
+          <p class="t-num">—</p>
+          <p class="t-num">8</p>
+          <p class="t-num">3</p>
+          <p class="t-num t-num--group">12</p>
+          <p class="t-num">—</p>
+          <p class="t-num">64</p>
+          <p class="t-area">星云区</p>
+          <a class="t-org" href="tsingyun/">星云交通部<small>TSingYun Transportation</small></a>
+          <p class="t-num t-num--group">5</p>
+          <p class="t-num">2</p>
+          <p class="t-num">—</p>
+          <p class="t-num">6</p>
+          <p class="t-num">2</p>
+          <p class="t-num t-num--group">—</p>
+          <p class="t-num">—</p>
+          <p class="t-num">48</p>
+          <p class="t-area">东城新区</p>
+          <a class="t-org" href="ec-transport/">EC Transport<small>东城交通</small></a>
+          <p class="t-num t-num--group">3</p>
+          <p class="t-num">2</p>
+          <p class="t-num">1</p>
+          <p class="t-num">9</p>
+          <p class="t-num">3</p>
+          <p class="t-num t-num--group">25</p>
+          <p class="t-num">9</p>
+          <p class="t-num">72</p>
+          <p class="t-area">西城区</p>
+          <a class="t-org" href="west/">西城交运<small>WESTTransportation</small></a>
+          <p class="t-num t-num--group">2</p>
+          <p class="t-num">1</p>
+          <p class="t-num">—</p>
+          <p class="t-num">5</p>
+          <p class="t-num">2</p>
+          <p class="t-num t-num--group">15</p>
+          <p class="t-num">6</p>
+          <p class="t-num">40</p>
+        </div>
       </div>
-    </div>
-  </section>
+      <p class="t-swipe">← 左右滑动查看完整表格 →</p>
 
-  <section class="t-block" aria-labelledby="bus-title">
-    <div class="wrap">
-      <div class="t-pill-row">
-        <h2 class="t-pill" id="bus-title">
-          <span class="dim">截至2026.08</span>
-          <span>围城市域内｜公共交通公司共有3家 <span class="arrow" aria-hidden="true">↘</span></span>
-        </h2>
-      </div>
-
-      <p class="t-pending">
-        页面持续更新中...<br>
-        <span class="dim">当前暂不开放本页面数据。</span>
-      </p>
-
-      <p class="t-sub">
-        交通部官方网站的轨道交通部分已先行开放，公共交通公司的线路与站点数据仍在核对，
-        开放后会在此页面更新。围城市政主站的新闻频道会同步发布进度。
+      <p class="t-body" style="margin-top: clamp(22px, 2.6vw, 40px)">
+        站点数据为换乘站点重复计算的运营站点数量；市域铁路与公交、出租数据按各运营主体在对应区内的
+        报备口径统计，后续会随线路调整更新。单击任一运营公司可进入该公司的独立页面。
       </p>
     </div>
   </section>
@@ -127,12 +151,10 @@
 
 <footer class="t-footer">
   <div class="wrap t-footer__inner">
-    <p>围城市政 26 交通部官方网站 · <a href="../">返回围城市政</a></p>
-    <p>©2026 · Test Version</p>
+    <p>&lt;市交通部 监制&gt;</p>
+    <p><a href="../">围城市政</a> · ©2026</p>
   </div>
 </footer>
-
-<p class="notice"><span class="notice__inner">观影须知 &nbsp;//&nbsp; 仅供娱乐 请勿当真 &nbsp;//&nbsp; 本网站只是随心做了一些有关交通的自设内容 仍然在持续不断完善中...</span></p>
 
 <script src="../assets/js/site.js" defer></script>
 </body>

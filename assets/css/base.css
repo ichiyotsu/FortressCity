@@ -18,6 +18,17 @@
   font-display: swap;
 }
 
+/* graffiti display face: SIXTH / FIFTH marks in the gift mall */
+@font-face {
+  font-family: "Sedgwick Ave Display";
+  src: url("../fonts/sedgwick-ave-display.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC;
+}
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -25,9 +36,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
-
-html:focus-within { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -43,7 +53,6 @@ body {
   overflow-x: hidden;
 }
 
-/* the stage: a barely-there warm bloom keeps pure black from feeling flat */
 body::before {
   content: "";
   position: fixed;
@@ -64,10 +73,7 @@ ul, ol { padding: 0; list-style: none; }
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
 a:focus-visible,
 button:focus-visible,
@@ -82,7 +88,6 @@ button:focus-visible,
   color: #fff;
 }
 
-/* screen-reader only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -104,9 +109,13 @@ button:focus-visible,
   background: #fff;
   color: #000;
   font-weight: 700;
-  border-radius: 2px;
   z-index: 99;
   transition: transform 0.2s var(--ease);
 }
 
 .skip-link:focus-visible { transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

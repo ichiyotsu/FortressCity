@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ichiyotsu.github.io/FortressCity/</loc><lastmod>2026-10-30</lastmod><priority>1.0</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/</loc><lastmod>2026-08-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-08-23/</loc><lastmod>2026-08-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-08-21/</loc><lastmod>2026-08-21</lastmod><priority>0.6</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-07-07/</loc><lastmod>2026-07-07</lastmod><priority>0.6</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-06-25/</loc><lastmod>2026-06-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-06-24/</loc><lastmod>2026-06-24</lastmod><priority>0.6</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-06-23/</loc><lastmod>2026-06-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/</loc><lastmod>2026-08-21</lastmod><priority>0.9</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/metro/</loc><lastmod>2026-08-21</lastmod><priority>0.5</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/lines/</loc><lastmod>2026-08-21</lastmod><priority>0.5</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/culture/</loc><lastmod>2026-08-21</lastmod><priority>0.5</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/livelihood/</loc><lastmod>2026-06-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/me/</loc><lastmod>2026-06-23</lastmod><priority>0.5</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/shop/</loc><lastmod>2026-06-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://ichiyotsu.github.io/FortressCity/en/</loc><lastmod>2026-08-23</lastmod><priority>0.4</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/livelihood/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/me/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/2026-06-23/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/2026-06-24/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/2026-06-25/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/2026-07-07/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/2026-08-21/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/en/news/2026-08-23/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/livelihood/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/me/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-06-23/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-06-24/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-06-25/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-07-07/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-08-21/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/news/2026-08-23/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/shop/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/culture/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/ec-transport/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/fortress-city-transportation/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/lines/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/nonchon/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/tsingyun/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ichiyotsu.github.io/FortressCity/transport/west/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
 </urlset>
