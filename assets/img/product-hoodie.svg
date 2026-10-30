@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="白色八周年庆祝卫衣">
+  <defs>
+    <linearGradient id="cloth3" x1="0.1" y1="0" x2="0.75" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#f4f4f4"/>
+      <stop offset="1" stop-color="#d9d9d9"/>
+    </linearGradient>
+    <linearGradient id="sleeve3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="1" stop-color="#cfcfcf"/>
+    </linearGradient>
+  </defs>
+
+  <!-- hood (behind the body) -->
+  <path d="M130 102 Q130 62 160 60 Q190 62 190 102 Q160 116 130 102 Z" fill="#ffffff"/>
+
+  <!-- sleeves -->
+  <path d="M108 100 L66 118 Q56 122 54 133 L42 194 Q40 205 51 207 L80 212 Q89 213 91 204 L106 140 Z" fill="url(#sleeve3)"/>
+  <path d="M212 100 L254 118 Q264 122 266 133 L278 194 Q280 205 269 207 L240 212 Q231 213 229 204 L214 140 Z" fill="url(#sleeve3)"/>
+
+  <!-- body -->
+  <path d="M106 98 L214 98 L212 252 Q212 264 200 264 L120 264 Q108 264 108 252 Z" fill="url(#cloth3)"/>
+
+  <!-- hood opening -->
+  <path d="M132 102 Q160 116 188 102 L188 110 Q160 124 132 110 Z" fill="#e6e6e6"/>
+  <path d="M138 103 Q160 115 182 103 L182 108 Q160 120 138 108 Z" fill="#f7f7f7"/>
+
+  <!-- cuffs -->
+  <path d="M42 190 L80 197 L78 212 L40 205 Z" fill="#e7e7e7"/>
+  <path d="M278 190 L240 197 L242 212 L280 205 Z" fill="#e7e7e7"/>
+
+  <!-- drawstrings -->
+  <path d="M148 112 Q144 132 149 152" stroke="#cccccc" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <path d="M172 112 Q176 132 171 152" stroke="#cccccc" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+
+  <!-- chest print -->
+  <g fill="#2b2b2b">
+    <rect x="139" y="156" width="42" height="2.4"/>
+    <text x="160" y="180" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="0.6">FCG</text>
+    <text x="160" y="191" font-family="Helvetica, Arial, sans-serif" font-size="5.4" text-anchor="middle" letter-spacing="0.4">8th celebrate</text>
+    <rect x="139" y="196" width="42" height="2.4"/>
+  </g>
+
+  <!-- hem band -->
+  <path d="M108 246 L212 246 L212 264 L108 264 Z" fill="#ededed"/>
+</svg>

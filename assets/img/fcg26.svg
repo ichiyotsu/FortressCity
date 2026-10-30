@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" role="img" aria-label="围城市政 26 交通部视觉标识">
+  <defs>
+    <linearGradient id="rainbow" x1="0.05" y1="0.95" x2="0.95" y2="0.05">
+      <stop offset="0" stop-color="#e8402f"/>
+      <stop offset="0.16" stop-color="#f08c26"/>
+      <stop offset="0.32" stop-color="#f5c62c"/>
+      <stop offset="0.48" stop-color="#4fbf6a"/>
+      <stop offset="0.63" stop-color="#2ba9a6"/>
+      <stop offset="0.78" stop-color="#3f7fd0"/>
+      <stop offset="0.9" stop-color="#8a5cd0"/>
+      <stop offset="1" stop-color="#d257a8"/>
+    </linearGradient>
+    <filter id="tglow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="720" fill="#000"/>
+
+  <!-- faint background wordmarks -->
+  <text x="86" y="150" fill="#ffffff" opacity="0.09" font-family="Helvetica, Arial, sans-serif" font-size="168" font-weight="700" letter-spacing="-6">FCG</text>
+  <text x="470" y="520" fill="#ffffff" opacity="0.10" font-family="Helvetica, Arial, sans-serif" font-size="430" font-weight="700" letter-spacing="-10">26</text>
+
+  <!-- decorative arcs, top right -->
+  <g fill="none" stroke-linecap="round" stroke-width="16">
+    <path d="M660 132 Q800 132 880 80" stroke="#4fbf6a"/>
+    <path d="M676 172 Q812 180 880 144" stroke="#f5c62c"/>
+    <path d="M690 214 Q816 236 872 208" stroke="#f08c26"/>
+    <path d="M700 256 Q808 286 858 266" stroke="#e8402f" stroke-width="12"/>
+  </g>
+
+  <!-- rainbow 26 -->
+  <g filter="url(#tglow)" transform="rotate(-4 470 400)">
+    <text x="250" y="560" fill="url(#rainbow)" font-family="Helvetica, Arial, sans-serif" font-size="470" font-weight="700" letter-spacing="-14">26</text>
+  </g>
+
+  <!-- left squiggle -->
+  <g fill="none" stroke-linecap="round" stroke-width="15">
+    <path d="M104 470 Q70 540 104 612" stroke="#4fbf6a"/>
+    <path d="M126 466 Q156 508 126 552 Q100 594 128 632" stroke="#2ba9a6"/>
+    <path d="M150 486 Q186 540 152 596" stroke="#3f7fd0"/>
+    <path d="M168 512 Q198 556 170 604" stroke="#8a5cd0"/>
+    <path d="M186 540 Q214 580 190 620" stroke="#d257a8"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="14">
+    <path d="M212 486 Q246 512 214 546" stroke="#f08c26"/>
+    <path d="M232 512 Q262 540 234 574" stroke="#f5c62c"/>
+    <path d="M250 540 Q276 566 252 600" stroke="#e8402f"/>
+  </g>
+</svg>
